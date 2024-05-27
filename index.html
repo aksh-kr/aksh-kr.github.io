@@ -25,8 +25,8 @@
                     <i class="fa-solid fa-bars" onclick="openmenu()"></i>
                 </nav>
                 <div class="header-text">
-                    <p>Software Developer</p>
-                    <h1>Hi, I'm <span>Akash</span><br>from India</h1>
+                    <p>Hi, I'm</p>
+                    <h1><span>Akash</span><br></h1>
                 </div>
             </div>
         </div>
@@ -39,16 +39,21 @@
                     </div>
                     <div class="about-col-2">
                         <h1 class="sub-title">About Me</h1>
-                        <p>Hi, I'm Akash, a software developer with expertise in backend development. I have a passion
-                            for building scalable and reliable systems that solve real-world problems. I am also
-                            proficient in a variety of programming languages and technologies, including Java, Python,
-                            and SQL.
-                            <br>
-                            <br>
-                            I am always looking for new challenges and opportunities to learn and grow.If you are
-                            looking for a
-                            talented and experienced backend developer, I would be honored to discuss how I can help you
-                            with your next project.
+                        <p>
+                        <p>Hello! I'm Akash, a passionate Java Backend Developer with over 3 years of hands-on
+                            experience in building scalable and efficient backend systems.</p>
+                        <br>
+                        <p>I have honed my skills in Java development, leveraging frameworks like
+                            Spring Boot to develop RESTful APIs and microservices. I am adept at designing and
+                            implementing database solutions using technologies such as MySQL, PostgreSQL, and MongoDB.
+                        </p>
+                        <br>
+                        <p>I thrive in dynamic environments where I can collaborate with cross-functional teams to
+                            deliver high-quality software solutions. My goal is to continuously expand my knowledge and
+                            expertise while contributing to impactful projects that make a difference.</p>
+                        <br>
+                        <p>I'm always open to new challenges and
+                            opportunities for growth, so feel free to reach out!</p>
                         </p>
 
                         <div class="tab-titles">
@@ -58,9 +63,11 @@
                         </div>
                         <div class="tab-contents active-tab" id="skills">
                             <ul>
-                                <li><span>Web Development</span><br>Web app development</li>
-                                <li><span>UI/UX</span><br>Designing Web/App interfaces</li>
-                                <li><span>App Development</span><br>Building Android / iOs apps</li>
+                                <li><span>Backend Development</span><br>Java, Spring Boot, Microservices, Distributed
+                                    Systems</li>
+                                <li><span>DevOps</span><br>Docker, Kubernetes, Jenkins, CI/CD and Git</li>
+                                <li><span>Additional Backend Skills</span><br>Hibernate, AWS, Redis, SOLID Principles
+                                </li>
                             </ul>
                         </div>
                         <div class="tab-contents" id="experience">
@@ -230,6 +237,31 @@
                         })
                         .catch(error => console.error('Error!', error.message))
                 })
+            </script>
+
+            <!-- Scroll to top button -->
+            <button class="scroll-to-top" onclick="scrollToTop()">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+
+            <script>
+                // Function to scroll to the top of the page smoothly
+                function scrollToTop() {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                }
+
+                // Show/hide the scroll-to-top button based on the scroll position
+                window.onscroll = function () {
+                    var scrollButton = document.querySelector('.scroll-to-top');
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        scrollButton.style.display = "block";
+                    } else {
+                        scrollButton.style.display = "none";
+                    }
+                };
             </script>
     </body>
 
