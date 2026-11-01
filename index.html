@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akash | SDE-II Backend Engineer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark');
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-900 dark:text-slate-100 antialiased selection:bg-blue-200 dark:selection:bg-blue-900 transition-colors duration-300">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-slate-50/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 transition-colors duration-300">
+        <div class="max-w-5xl mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-tighter text-slate-900 dark:text-white">akashcodes<span class="text-blue-600 dark:text-blue-500">.tech</span></a>
+            <div class="flex items-center space-x-6">
+                <div class="hidden md:flex space-x-6 font-medium text-sm text-slate-600 dark:text-slate-300">
+                    <a href="#skills" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Stack</a>
+                    <a href="#experience" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Experience</a>
+                    <a href="#philosophy" class="hover:text-blue-600 dark:hover:text-blue-400 transition">Philosophy</a>
+                </div>
+                <!-- Dark Mode Toggle -->
+                <button onclick="toggleDarkMode()" class="p-2 rounded-full hover:bg-slate-200 dark:hover:bg-slate-800 transition text-slate-600 dark:text-slate-300 focus:outline-none" aria-label="Toggle Dark Mode">
+                    <i class="fa-solid fa-moon hidden dark:block"></i>
+                    <i class="fa-solid fa-sun block dark:hidden"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="max-w-5xl mx-auto px-6 py-24 md:py-32">
+        <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-800 dark:text-blue-300 text-sm font-medium mb-6">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-blue-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-blue-500"></span>
+            </span>
+            <span>Available for SDE-II / Senior roles</span>
+        </div>
+        <h1 class="text-5xl md:text-7xl font-bold tracking-tight leading-tight mb-6 text-slate-900 dark:text-white">
+            Engineering resilient <br class="hidden md:block"/> distributed systems at scale.
+        </h1>
+        <p class="text-xl md:text-2xl text-slate-600 dark:text-slate-400 mb-10 max-w-3xl leading-relaxed font-light">
+            Software Engineer with 6+ years of experience architecting Java microservices, high-throughput pipelines, and secure AI-accelerated workflows.
+        </p>
+        <div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+            <a href="#experience" class="text-center bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-medium transition shadow-lg shadow-blue-600/20">View Experience</a>
+            <a href="#contact" class="text-center bg-white dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-700 dark:text-slate-300 px-8 py-3 rounded-lg font-medium hover:bg-slate-50 dark:hover:bg-slate-700 transition">Get in Touch</a>
+        </div>
+    </header>
+
+    <!-- Core Stack Section -->
+    <section id="skills" class="bg-white dark:bg-slate-800/50 py-24 border-y border-slate-100 dark:border-slate-800 transition-colors duration-300">
+        <div class="max-w-5xl mx-auto px-6">
+            <h2 class="text-xs font-bold tracking-widest text-blue-600 dark:text-blue-500 uppercase mb-12">Core Engineering Stack</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+                <div>
+                    <h3 class="font-semibold text-slate-900 dark:text-white mb-5 flex items-center"><i class="fa-brands fa-java mr-2 text-slate-400"></i> Application</h3>
+                    <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+                        <li>Java 11/17</li>
+                        <li>Spring Boot</li>
+                        <li>RESTful APIs</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-slate-900 dark:text-white mb-5 flex items-center"><i class="fa-solid fa-network-wired mr-2 text-slate-400"></i> Architecture</h3>
+                    <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+                        <li>Microservices</li>
+                        <li>ETL Pipelines</li>
+                        <li>Distributed Systems</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-slate-900 dark:text-white mb-5 flex items-center"><i class="fa-solid fa-robot mr-2 text-slate-400"></i> AI & Tooling</h3>
+                    <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+                        <li>Local LLMs (Qwen, Ollama)</li>
+                        <li>AI Agents (Aider)</li>
+                        <li>Secure CI/CD Workflows</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="font-semibold text-slate-900 dark:text-white mb-5 flex items-center"><i class="fa-solid fa-code-branch mr-2 text-slate-400"></i> Fundamentals</h3>
+                    <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-400">
+                        <li>System Design</li>
+                        <li>Algorithmic Optimization</li>
+                        <li>Advanced Data Structures</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Impact Section -->
+    <section id="experience" class="max-w-5xl mx-auto px-6 py-24">
+        <h2 class="text-xs font-bold tracking-widest text-blue-600 dark:text-blue-500 uppercase mb-12">Engineering Impact & Architecture</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            
+            <!-- Project 1 -->
+            <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition group">
+                <div class="h-12 w-12 bg-slate-50 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300 rounded-xl flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-database"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Fault-Tolerant ETL Pipelines</h3>
+                <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">
+                    Architected robust asynchronous data flows using Spring Boot. Optimized ScheduledExecutorBean lifecycles across distributed nodes to significantly reduce data processing latency and ensure fault tolerance at scale.
+                </p>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition group">
+                <div class="h-12 w-12 bg-slate-50 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300 rounded-xl flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-link"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">High-Throughput URL Shortener</h3>
+                <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">
+                    Designed system architecture capable of handling massive read/write ratios. Implemented robust database routing and custom checksum verification logic to guarantee data integrity and achieve zero-collision scaling.
+                </p>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="bg-white dark:bg-slate-800 p-8 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm hover:shadow-md transition group">
+                <div class="h-12 w-12 bg-slate-50 dark:bg-slate-700/50 text-slate-700 dark:text-slate-300 rounded-xl flex items-center justify-center text-xl mb-6 group-hover:scale-110 transition-transform">
+                    <i class="fa-solid fa-microchip"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Enterprise AI Integration</h3>
+                <p class="text-slate-600 dark:text-slate-400 leading-relaxed text-sm">
+                    Pioneered local AI-assisted engineering workflows. Deployed secure, offline LLMs (Ollama, Qwen 2.5 Coder) and AI agents (Aider) on enterprise hardware to accelerate development cycles while maintaining strict corporate data compliance.
+                </p>
+            </div>
+
+            <!-- Project 4 -->
+            <div id="philosophy" class="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-slate-800 dark:to-slate-800 p-8 rounded-2xl border border-blue-100 dark:border-slate-700 shadow-sm transition">
+                <div class="h-12 w-12 bg-blue-600 text-white rounded-xl flex items-center justify-center text-xl mb-6">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <h3 class="text-xl font-bold text-slate-900 dark:text-white mb-3">Clean Code Architecture</h3>
+                <p class="text-slate-700 dark:text-slate-300 leading-relaxed text-sm">
+                    Championed code quality across enterprise Java repositories. Enforced strict method placement standards (Stepdown Rule) and optimized application performance via advanced data structures and algorithmic rigor.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="contact" class="bg-slate-900 text-slate-300 py-16 mt-10 border-t border-slate-800">
+        <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="mb-8 md:mb-0 text-center md:text-left">
+                <h2 class="text-2xl font-bold mb-2 text-white">Let's connect.</h2>
+                <p class="text-slate-400 text-sm">Open to SDE-II opportunities in India and Europe.</p>
+            </div>
+            <div class="flex space-x-6 text-2xl">
+                <a href="https://www.linkedin.com/in/akaskr/" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-white transition transform hover:-translate-y-1"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://x.com/resilientbloke" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-white transition transform hover:-translate-y-1"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-slate-500 hover:text-white transition transform hover:-translate-y-1"><i class="fa-brands fa-github"></i></a>
+            </div>
+        </div>
+        <div class="max-w-5xl mx-auto px-6 mt-12 pt-8 border-t border-slate-800 text-slate-500 text-xs flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
+            <p>&copy; 2026 Akash. All rights reserved.</p>
+            <p class="flex items-center"><i class="fa-solid fa-location-dot mr-2"></i> Handcrafted in Bengaluru</p>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollTopBtn" onclick="scrollToTop()" class="fixed bottom-8 right-8 bg-blue-600 text-white p-3 rounded-full shadow-lg opacity-0 translate-y-10 transition-all duration-300 hover:bg-blue-700 focus:outline-none z-50" aria-label="Scroll to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <script>
+        // Dark Mode Toggle Logic
+        function toggleDarkMode() {
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.theme = 'light';
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.theme = 'dark';
+            }
+        }
+
+        // Scroll to Top Logic
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 300) {
+                scrollTopBtn.classList.remove('opacity-0', 'translate-y-10');
+                scrollTopBtn.classList.add('opacity-100', 'translate-y-0');
+            } else {
+                scrollTopBtn.classList.remove('opacity-100', 'translate-y-0');
+                scrollTopBtn.classList.add('opacity-0', 'translate-y-10');
+            }
+        });
+
+        function scrollToTop() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
